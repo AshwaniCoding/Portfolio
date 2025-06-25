@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import heroBg from "../assets/webdev.svg";
-import Typical from "react-typical";
+import { TypeAnimation } from "react-type-animation";
 import { contactLinks } from "../constants";
 import { ThemeContext } from "../themeProvider";
 import { motion } from "framer-motion";
@@ -32,14 +32,16 @@ const Home = () => {
                 Hi, I am Ashwani
               </motion.span>
               <span className="block text-blue-500 z-0 lg:inline">
-                <Typical
-                  steps={[
+                <TypeAnimation
+                  sequence={[
                     "Software Developer",
                     1000,
                     "Test Automation Engineer",
-                    1000
+                    1000,
                   ]}
-                  loop={Infinity}
+                  speed={50}
+                  wrapper="span"
+                  repeat={Infinity}
                 />
               </span>
             </h1>
@@ -50,7 +52,8 @@ const Home = () => {
                   : "mt-3 text-base text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
               }
             >
-              I’m a passionate Software Developer with expertise in development and test automation.
+              I’m a passionate Software Developer with expertise in development
+              and test automation.
             </p>
             <div className="flex md:justify-start ">
               {contactLinks.map((el) => (
@@ -65,7 +68,10 @@ const Home = () => {
             </div>
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div className="mt-3 sm:mt-0 cursor-pointer w-1/2">
-                <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-200 md:py-4 md:text-lg md:px-10" href="https://drive.google.com/file/d/17t8auP-jUQsYepVh9mEy3dI9OhAZ-H1b/view?usp=drive_link">
+                <a
+                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-200 md:py-4 md:text-lg md:px-10"
+                  href="https://drive.google.com/file/d/17t8auP-jUQsYepVh9mEy3dI9OhAZ-H1b/view?usp=drive_link"
+                >
                   Resume
                 </a>
               </div>
