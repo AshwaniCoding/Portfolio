@@ -64,18 +64,18 @@ export const contactLinks = [
 export const serviceData = [
   {
     name: 'Software Development',
-    desc: 'We create robust desktop applications using NetBeans and Swing, focusing on developing user-friendly interfaces and efficient functionality. Our aim is to deliver scalable solutions that effectively address user needs while ensuring a seamless user experience.',
+    desc: 'I design and develop robust backend and full-stack applications using Java, Spring Boot, and modern development practices. My focus is on creating scalable, secure, and high-performance solutions that meet business needs while ensuring clean architecture and maintainability.',
     img: "https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png"
   },
   {
     name: 'Test Automation',
-    desc: `We develop and implement automated test scripts using frameworks like TestNG and Cucumber. Our approach enhances testing efficiency and ensures comprehensive coverage of software applications, allowing for quicker feedback and improved software quality.`,
+    desc: `I build and maintain automation frameworks using TestNG, Cucumber, and Allure, enabling efficient regression testing and faster release cycles. My automation approach ensures comprehensive coverage and reduces manual testing effort, improving overall software quality.`,
     img: "https://img.icons8.com/external-justicon-lineal-color-justicon/64/000000/external-app-development-responsive-web-design-justicon-lineal-color-justicon.png"
   },
 
   {
     name: 'Quality Assurance',
-    desc: `We conduct thorough testing of software products to identify defects and ensure they meet specified requirements. This process helps us maintain high quality and reliability in the final deliverables, ultimately enhancing user satisfaction.`,
+    desc: `I apply both manual and automated testing strategies to verify software functionality, performance, and security. By combining development and testing expertise, I ensure each deliverable meets high standards of reliability, user experience, and business compliance.`,
     img: "https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-backend-no-code-flaticons-flat-flat-icons.png"
   },
 

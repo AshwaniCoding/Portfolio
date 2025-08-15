@@ -61,7 +61,7 @@ const Home = () => {
                   href={el.link}
                   className="mr-5 cursor-pointer mt-8 hover:scale-125"
                 >
-                  <img alt="" src={el.url} />
+                  <img alt="" src={el.url} style={{ width: "40px", height: "40px", objectFit: "contain" }} />
                   {/* <p className="text-md mt-2 hover:hidden">{el.name}</p> */}
                 </a>
               ))}

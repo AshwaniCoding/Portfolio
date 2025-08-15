@@ -30,13 +30,7 @@ const About = () => {
                   : "mt-4 text-xl text-justify text-white"
               }
             >
-              I am a software professional with a strong focus on development and test automation. 
-              I have experience working on projects like 'BookVerse,' a comprehensive platform for 
-              book management, and I have contributed to various automation projects using 
-              frameworks like TestNG, along with tools such as Cucumber and Allure. I have hands-on 
-              expertise in Java, specifically with JDK 21, and I am proficient with Maven for project 
-              management. My background includes practical work during my internship with DigitalBhem, 
-              where I developed an 'Online Banking System' using Java.
+              I am a software professional with expertise in Java development and test automation, currently working as a Developer in Software Engineering at UST. I have experience designing and building applications, as well as creating robust automation frameworks. My work spans projects like BookVerse, a book management platform, and automation solutions using TestNG, Cucumber, and Allure. I am skilled in Java (JDK 21), Spring Boot, REST API development, and Maven for project management. My journey also includes developing an Online Banking System during my internship at DigitalBhem, giving me hands-on experience across the software development lifecycle. I am passionate about writing clean, maintainable code and continuously learning new technologies to deliver high-quality software solutions.
             </p>
           </motion.div>
           <motion.div
