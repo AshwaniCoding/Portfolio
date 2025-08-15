@@ -53,9 +53,10 @@ export const techStack = [
 
 
 export const contactLinks = [
-{ name: 'Instagram', url: 'https://img.icons8.com/doodle/40/000000/instagram-new--v2.png', link: 'https://www.instagram.com/ashwani_44' },
-{ name: 'Github', url: 'https://img.icons8.com/doodle/40/000000/github--v1.png', link :'https://github.com/ashwanicoding'},
-{ name: 'LinkedIn', url: 'https://img.icons8.com/doodle/40/000000/linkedin--v2.png', link: 'https://www.linkedin.com/in/ashwanid/'}
+  { name: 'LinkedIn', url: 'https://img.icons8.com/doodle/40/000000/linkedin--v2.png', link: 'https://www.linkedin.com/in/ashwanid/'},
+  { name: 'Github', url: 'https://img.icons8.com/doodle/40/000000/github--v1.png', link :'https://github.com/ashwanicoding'},
+  { name: 'Leetcode', url: 'https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000', link :'https://leetcode.com/u/ashwani_44/'},
+  { name: 'Instagram', url: 'https://img.icons8.com/doodle/40/000000/instagram-new--v2.png', link: 'https://www.instagram.com/ashwani_44' },
 ]
 
 
