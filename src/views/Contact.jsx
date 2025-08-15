@@ -130,7 +130,7 @@ const Contact = () => {
                   href={el.link}
                   className="md:ml-6 md:mr-0 mr-6 cursor-pointer mt-4 hover:scale-125 flex flex-col justify-center items-center"
                 >
-                  <img alt="" src={el.url} />
+                  <img alt="" src={el.url} style={{ width: "40px", height: "40px", objectFit: "contain" }} />
                   {/* <p className="text-md mt-2 hover:hidden">{el.name}</p> */}
                 </a>
               ))}
