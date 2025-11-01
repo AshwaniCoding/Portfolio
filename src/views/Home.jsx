@@ -70,7 +70,7 @@ const Home = () => {
               <div className="mt-3 sm:mt-0 cursor-pointer w-1/2">
                 <a
                   className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-200 md:py-4 md:text-lg md:px-10"
-                  href="https://drive.google.com/file/d/1XURQkE4ab7nF50cCtglfJRpkNpJpjOND/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1rFvf9Sl6KM_xdce3UNCN16TPg5pAzBlC/view?usp=sharing"
                 >
                   Resume
                 </a>
