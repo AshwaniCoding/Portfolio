@@ -5,58 +5,51 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <!-- Homepage & Core Portfolio -->
   <url>
-    <loc>https://ashwani-44.netlify.app/</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://ashwanikumardwivedi.netlify.app/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- About & Experience Section -->
+  <!-- Automation & Software Projects -->
   <url>
-    <loc>https://ashwani-44.netlify.app/#about</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://ashwanikumardwivedi.netlify.app/#projects</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <!-- Experience Section -->
+  <!-- Professional Experience -->
   <url>
-    <loc>https://ashwani-44.netlify.app/#experience</loc>
-    <lastmod>2026-08-28</lastmod>
+    <loc>https://ashwanikumardwivedi.netlify.app/#experience</loc>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <!-- Skills & Core Competencies -->
   <url>
-    <loc>https://ashwani-44.netlify.app/#skills</loc>
-    <lastmod>2026-08-28</lastmod>
+    <loc>https://ashwanikumardwivedi.netlify.app/#skills</loc>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <!-- Test Automation & Services -->
   <url>
-    <loc>https://ashwani-44.netlify.app/#services</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Automation & Software Projects -->
-  <url>
-    <loc>https://ashwani-44.netlify.app/#projects</loc>
-    <lastmod>2026-08-28</lastmod>
+    <loc>https://ashwanikumardwivedi.netlify.app/#services</loc>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- QA & Test Automation Articles / Blog Insights -->
   <url>
-    <loc>https://ashwani-44.netlify.app/#articles</loc>
-    <lastmod>2026-08-28</lastmod>
+    <loc>https://ashwanikumardwivedi.netlify.app/#articles</loc>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Contact & Entity Hub -->
   <url>
-    <loc>https://ashwani-44.netlify.app/#contact</loc>
-    <lastmod>2026-08-28</lastmod>
+    <loc>https://ashwanikumardwivedi.netlify.app/#contact</loc>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
   </url>
 </urlset>

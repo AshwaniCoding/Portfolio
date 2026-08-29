@@ -1,6 +1,6 @@
 /**
  * Central SEO and Personal Branding Configuration
- * Easily configure your production domain (e.g. https://ashwanidwivedi.com or https://ashwani-44.netlify.app)
+ * Production domain: https://ashwanikumardwivedi.netlify.app
  */
 
 import { calculateExperience, CURRENT_EXPERIENCE } from "./utils/experience";
@@ -9,7 +9,7 @@ export const exp = CURRENT_EXPERIENCE;
 
 export const SITE_CONFIG = {
   // Domain & Canonical URL configuration
-  siteUrl: process.env.REACT_APP_SITE_URL || "https://ashwani-44.netlify.app",
+  siteUrl: process.env.REACT_APP_SITE_URL || "https://ashwanikumardwivedi.netlify.app",
   futureCustomDomain: "https://ashwanidwivedi.com",
   
   // Identity & Branding
