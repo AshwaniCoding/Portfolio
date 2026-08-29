@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import { ThemeContext } from "../themeProvider";
 import { Squash as Hamburger } from "hamburger-react";
 import { SITE_CONFIG } from "../seoConfig";
+import AshwaniAvatar from "./AshwaniAvatar";
 
 const Navbar = () => {
   const theme = useContext(ThemeContext);
@@ -34,7 +35,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-40 px-3 sm:px-6 pt-3 sm:pt-4 transition-all duration-300">
       <div
-        className={`max-w-6xl mx-auto rounded-full px-4 sm:px-6 py-2.5 flex items-center justify-between transition-all duration-300 ${
+        className={`max-w-6xl mx-auto rounded-full px-3.5 sm:px-5 py-2 flex items-center justify-between transition-all duration-300 ${
           scrolled
             ? darkMode
               ? "bg-zinc-950/85 backdrop-blur-xl border border-zinc-800 shadow-xl shadow-black/40"
@@ -44,13 +45,26 @@ const Navbar = () => {
             : "bg-white/80 backdrop-blur-md border border-zinc-200/60 shadow-sm"
         }`}
       >
-        {/* Left: Available for New Project Pill (Matches image.png) */}
-        <div className="flex items-center gap-2">
+        {/* Left: Cartoon Logo + Available for New Project Pill */}
+        <div className="flex items-center gap-2.5">
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            className="flex items-center gap-2 cursor-pointer group"
+            title="Ashwani Dwivedi"
+          >
+            <AshwaniAvatar size="w-7 h-7" className="group-hover:scale-105 transition-transform" />
+            <span className="text-xs font-bold font-sans tracking-tight text-zinc-900 dark:text-white hidden lg:inline">
+              Ashwani
+            </span>
+          </Link>
+
           <Link
             to="contact"
             smooth={true}
             duration={500}
-            className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-sans font-medium transition-all cursor-pointer ${
+            className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-sans font-medium transition-all cursor-pointer ${
               darkMode
                 ? "bg-zinc-900 border border-zinc-800 text-zinc-200 hover:border-zinc-700"
                 : "bg-white border border-zinc-200/80 text-zinc-800 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-zinc-300"

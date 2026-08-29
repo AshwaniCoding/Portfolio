@@ -139,7 +139,7 @@ export function getStructuredData(baseUrl = SITE_CONFIG.siteUrl) {
         "description": SITE_CONFIG.metaDescription,
         "url": baseUrl,
         "email": `mailto:${SITE_CONFIG.email}`,
-        "image": `${baseUrl}/logo512.png`,
+        "image": `${baseUrl}/logo.svg`,
         "sameAs": [
           SITE_CONFIG.socialLinks.linkedin,
           SITE_CONFIG.socialLinks.github,
