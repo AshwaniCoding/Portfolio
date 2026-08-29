@@ -1,6 +1,5 @@
 {
   "name": "ashwani_portfolio",
-  "homepage": "https://ashwani-44.netlify.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,15 +18,15 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "PORT=3000 HOST=0.0.0.0 react-scripts start",
+    "start": "PORT=3000 HOST=0.0.0.0 react-scripts start",
+    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {

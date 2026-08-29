@@ -1,3 +1,27 @@
-# https://www.robotstxt.org/robotstxt.html
+# Robots.txt for Ashwani Kumar Dwivedi (Ashwani Dwivedi) Portfolio
+# Website: https://ashwani-44.netlify.app/
+
 User-agent: *
-Disallow:
+Allow: /
+
+# Explicit Search Engine Bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Sitemaps
+Sitemap: https://ashwani-44.netlify.app/sitemap.xml

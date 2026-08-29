@@ -1,170 +1,179 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { ThemeContext } from "../themeProvider";
-import { motion, AnimatePresence } from "framer-motion";
-import Hamburger from "hamburger-react";
+import { Squash as Hamburger } from "hamburger-react";
+import { SITE_CONFIG } from "../seoConfig";
 
 const Navbar = () => {
   const theme = useContext(ThemeContext);
-  const [toggle, setToggle] = useState(false);
   const darkMode = theme.state.darkMode;
-  const links = [
-    {
-      name: "Home",
-      route: "/",
-    },
-    {
-      name: "About",
-      route: "about",
-    },
-    {
-      name: "Services",
-      route: "services",
-    },
-    {
-      name: "Projects",
-      route: "projects",
-    },
-    {
-      name: "Contact",
-      route: "contact",
-    },
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navItems = [
+    { label: "Work [5]", to: "projects" },
+    { label: `Experience [${SITE_CONFIG.experienceStats?.yrsExp || "1.7 Yrs"}]`, to: "experience" },
+    { label: "Skills", to: "skills" },
+    { label: "Services [6]", to: "services" },
+    { label: "Articles [3]", to: "articles" },
+    { label: "Contact", to: "contact" }
   ];
 
-  function toggleTheme() {
-    if (darkMode === true) {
-      theme.dispatch({ type: "LIGHTMODE" });
-    } else {
-      theme.dispatch({ type: "DARKMODE" });
-    }
-  }
-
   return (
-    <>
-      <nav
-        className={
-          darkMode
-            ? "bg-white border-gray-200 z-50 shadow-lg md:px-8 px-1 fixed w-full top-0"
-            : "bg-gray-700 border-gray-200 z-50 shadow-lg md:px-8 px-1 fixed w-full top-0"
-        }
+    <header className="fixed top-0 left-0 right-0 z-40 px-3 sm:px-6 pt-3 sm:pt-4 transition-all duration-300">
+      <div
+        className={`max-w-6xl mx-auto rounded-full px-4 sm:px-6 py-2.5 flex items-center justify-between transition-all duration-300 ${
+          scrolled
+            ? darkMode
+              ? "bg-zinc-950/85 backdrop-blur-xl border border-zinc-800 shadow-xl shadow-black/40"
+              : "bg-white/90 backdrop-blur-xl border border-zinc-200/80 shadow-md shadow-zinc-900/5"
+            : darkMode
+            ? "bg-zinc-900/60 backdrop-blur-md border border-zinc-800/60"
+            : "bg-white/80 backdrop-blur-md border border-zinc-200/60 shadow-sm"
+        }`}
       >
-        <div className="flex justify-between items-center py-2 md:py-4 md:px-2 pl-2 mx-auto">
-          <div className="flex items-center cursor-pointer">
-            <a
-              href="/"
-              className={
-                darkMode
-                  ? "text-xl font-medium text-decoration-none whitespace-nowrap text-black"
-                  : "text-xl font-medium text-decoration-none whitespace-nowrap text-white"
-              }
-            >
-              {`Ashwani Kumar Dwivedi`}
-            </a>
-          </div>
-          <div class="hidden justify-between items-center w-full md:flex md:w-auto ">
-            <ul
-              class={
-                "flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium"
-              }
-            >
-              {links.map((el) => (
-                <li className="cursor-pointer">
-                  <Link
-                    to={el.route}
-                    activeClass={"text-white bg-blue-500"}
-                    spy={true}
-                    smooth={true}
-                    className={
-                      darkMode
-                        ? "block py-2 px-3 text-black hover:bg-blue-500 hover:text-white rounded-md"
-                        : "block py-2 px-3 text-white hover:bg-blue-500 hover:text-black rounded-md"
-                    }
-                  >
-                    {el.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div onClick={() => toggleTheme()}>
-              {darkMode ? (
-                <img
-                  src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-sun-lighting-flaticons-flat-flat-icons.png"
-                  className="w-6 ml-6 cursor-pointer hover:scale-1.50 block"
-                  alt=""
-                />
-              ) : (
-                <img
-                  src="https://img.icons8.com/external-prettycons-lineal-color-prettycons/49/000000/external-moon-astrology-and-symbology-prettycons-lineal-color-prettycons.png"
-                  className="w-6 ml-6 cursor-pointer hover:scale-1.50 block"
-                  alt=""
-                />
-              )}
-            </div>
-          </div>
+        {/* Left: Available for New Project Pill (Matches image.png) */}
+        <div className="flex items-center gap-2">
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-sans font-medium transition-all cursor-pointer ${
+              darkMode
+                ? "bg-zinc-900 border border-zinc-800 text-zinc-200 hover:border-zinc-700"
+                : "bg-white border border-zinc-200/80 text-zinc-800 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-zinc-300"
+            }`}
+          >
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="hidden xs:inline sm:inline">Available for New Project</span>
+            <span className="xs:hidden sm:hidden">Available</span>
+          </Link>
+        </div>
 
-          <div className="flex md:hidden items-center">
-            <div onClick={() => toggleTheme()}>
-              {darkMode ? (
-                <img
-                  src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-sun-lighting-flaticons-flat-flat-icons.png"
-                  className="w-6 mr-4 cursor-pointer hover:scale-1.50 block"
-                  alt=""
-                />
-              ) : (
-                <img
-                  src="https://img.icons8.com/external-prettycons-lineal-color-prettycons/49/000000/external-moon-astrology-and-symbology-prettycons-lineal-color-prettycons.png"
-                  alt=""
-                  className="w-6 mr-4 cursor-pointer hover:scale-1.50 block"
-                />
-              )}
-            </div>
+        {/* Center: Editorial Nav Links with [Counts] (Matches image.png) */}
+        <nav className="hidden md:flex items-center gap-1 font-sans text-xs font-medium">
+          {navItems.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-70}
+              activeClass="!text-zinc-950 dark:!text-white !font-bold"
+              className="px-3.5 py-1.5 rounded-full text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition-all cursor-pointer"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
 
+        {/* Right: Theme Toggle + Let's Talk ↗ Button (Matches image.png) */}
+        <div className="flex items-center gap-2">
+          {/* Dark Mode Toggle */}
+          <button
+            onClick={() => {
+              theme.dispatch({ type: "TOGGLE" });
+            }}
+            aria-label="Toggle Theme"
+            className={`p-2 rounded-full border transition-all duration-200 active:scale-90 cursor-pointer ${
+              darkMode
+                ? "bg-zinc-800 border-zinc-700 text-yellow-400 hover:bg-zinc-700"
+                : "bg-zinc-100 border-zinc-200 text-zinc-700 hover:bg-zinc-200"
+            }`}
+          >
+            {darkMode ? (
+              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
+              </svg>
+            ) : (
+              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+              </svg>
+            )}
+          </button>
+
+          {/* Let's Talk CTA Pill (Black pill button) */}
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            className={`inline-flex items-center gap-1 px-4 sm:px-5 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 active:scale-95 cursor-pointer shadow-sm ${
+              darkMode
+                ? "bg-white text-zinc-950 hover:bg-zinc-200"
+                : "bg-zinc-900 text-white hover:bg-zinc-800"
+            }`}
+          >
+            <span>Let's Talk</span>
+            <span className="text-[11px] transition-transform duration-200 group-hover:translate-x-0.5">↗</span>
+          </Link>
+
+          {/* Mobile Hamburger Toggle */}
+          <div className="md:hidden">
             <Hamburger
-              toggled={toggle}
-              size={22}
-              duration={0.8}
-              distance={"lg"}
-              toggle={setToggle}
-              color={darkMode ? "#000000" : "#ffffff"}
+              toggled={isOpen}
+              toggle={setIsOpen}
+              size={18}
+              color={darkMode ? "#ffffff" : "#18181b"}
+              label="Toggle navigation menu"
             />
           </div>
         </div>
-        {/* Mobile view nav bar */}
-      </nav>
-      <AnimatePresence>
-        {toggle && (
-          <motion.div
-            initial={{ x: 100 }}
-            animate={{ x: 0, transition: { type: "spring" } }}
-            exit={{ x: 200, transition: { type: "spring" } }}
-            className={
-              darkMode
-                ? "bg-white py-2 px-2 md:p-0 z-50 fixed top-16 mt-2 rounded-lg shadow-lg right-2 block w-40"
-                : "bg-black py-2 px-2 md:p-0 z-50 fixed top-16 mt-2 rounded-lg shadow-lg right-2 block w-40"
-            }
-          >
-            <ul class="md:hidden md:flex-row md:space-y-8 md:mt-0 md:text-md md:font-medium">
-              {links.map((el) => (
-                <Link
-                  to={el.route}
-                  activeClass={"text-white bg-blue-500"}
-                  className={
-                    darkMode
-                      ? "hover:bg-blue-500 text-black block px-3 py-2 rounded-md text-base font-medium mt-1 hover:text-white"
-                      : "hover:bg-blue-500 text-white block px-3 py-2 rounded-md text-base font-medium mt-1 hover:text-white"
-                  }
-                  spy={true}
-                  smooth={true}
-                  onClick={() => setToggle(false)}
-                >
-                  <li>{el.name}</li>
-                </Link>
-              ))}
-            </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+      </div>
+
+      {/* Mobile Drawer */}
+      {isOpen && (
+        <div
+          className={`lg:hidden mt-2 max-w-6xl mx-auto rounded-2xl p-5 border shadow-2xl transition-all ${
+            darkMode
+              ? "bg-zinc-900/95 border-zinc-800 backdrop-blur-2xl text-zinc-100"
+              : "bg-white/95 border-zinc-200 backdrop-blur-2xl text-zinc-900"
+          }`}
+        >
+          <div className="flex flex-col space-y-1">
+            {navItems.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                smooth={true}
+                duration={500}
+                offset={-70}
+                onClick={() => setIsOpen(false)}
+                className="px-4 py-2.5 rounded-xl font-mono text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <div className="pt-3 mt-2 border-t border-zinc-200 dark:border-zinc-800">
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
+                onClick={() => setIsOpen(false)}
+                className={`w-full py-2.5 rounded-xl flex items-center justify-center gap-1 text-xs font-semibold cursor-pointer ${
+                  darkMode ? "bg-white text-zinc-950" : "bg-zinc-900 text-white"
+                }`}
+              >
+                <span>Let's Talk</span>
+                <span>↗</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </header>
   );
 };
 

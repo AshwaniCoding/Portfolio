@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Ashwani Dwivedi",
+  "name": "Ashwani Kumar Dwivedi (Ashwani Dwivedi) - QA Automation Portfolio",
+  "description": "Portfolio of Ashwani Kumar Dwivedi (Ashwani Dwivedi), QA Automation Engineer & SDET specializing in Playwright, TypeScript, GraphQL & REST API Testing, Bruno, Selenium, and Java.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#18181b",
+  "background_color": "#09090b"
 }
