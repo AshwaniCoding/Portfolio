@@ -15,11 +15,11 @@ export const SITE_CONFIG = {
   // Identity & Branding
   fullName: "Ashwani Kumar Dwivedi",
   brandName: "Ashwani Dwivedi",
-  title: `Ashwani Kumar Dwivedi | QA Automation Engineer | SDET (${exp.yearsText})`,
+  title: `Ashwani Kumar Dwivedi | QA Automation Engineer & SDET`,
   shortRole: "QA Automation Engineer",
   tagline: `QA Automation Engineer (${exp.yrsExp}) | Playwright | TypeScript | Selenium | Java | GraphQL & REST API Testing | Bruno | CI/CD | Quality Engineering`,
   
-  metaDescription: `Ashwani Kumar Dwivedi (Ashwani Dwivedi) is a QA Automation Engineer with ${exp.formattedDecimal || exp.decimal} years of experience at UST specializing in Playwright, TypeScript, GraphQL & REST API Testing, Bruno, Selenium, Java, and Shift-Left CI/CD Quality Engineering.`,
+  metaDescription: `Ashwani Kumar Dwivedi is a QA Automation Engineer and SDET at UST, specializing in Playwright, TypeScript, API automation, GraphQL, Selenium, Java, and CI/CD testing.`,
   
   email: "ashwanidwivedi7898@gmail.com",
   location: "Satna, Madhya Pradesh, India",
