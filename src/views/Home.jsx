@@ -46,7 +46,7 @@ const Home = () => {
             <div className="md:col-span-4 space-y-3 sm:space-y-4 pb-2 text-center md:text-left order-2 md:order-1">
               <div>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-zinc-950 dark:text-white font-sans tracking-tight leading-tight">
-                  QA Automation Engineer
+                  QA Automation Engineer &amp; SDET
                 </h2>
                 <p className="mt-2 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-sans leading-relaxed max-w-sm mx-auto md:mx-0">
                   Architecting automated test frameworks that are deterministic, resilient, and shift-left focused.

@@ -131,7 +131,7 @@ const Projects = () => {
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-zinc-900 dark:text-white uppercase font-sans">
-              QA Automation Work
+              Featured QA Automation Projects
             </h2>
             <p className="text-sm sm:text-base text-zinc-500 dark:text-zinc-400 max-w-xl">
               End-to-end test automation suites, API verification frameworks, and CI/CD quality gates engineered by {SITE_CONFIG.fullName}.
